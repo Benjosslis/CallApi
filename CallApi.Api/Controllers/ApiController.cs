@@ -17,23 +17,23 @@ namespace CallApi.Api.Controllers
             _deSerialisation = new DeSerialisation();
         }
 
-        //string connextion =
-        //     "Server=.;" +
-        //    "DataBase=CallApi;" +
-        //    "user=EFcore;" +
-        //    "password=azerty@123;" +
-        //    "TrustServerCertificate=true";
+        string connextion =
+            "Server=.;" +
+           "DataBase=CallApi;" +
+           "user=EFcore;" +
+           "password=azerty@123;" +
+           "TrustServerCertificate=true";
 
-        //SqlConnection _connection;
+        SqlConnection _connection;
 
 
-        //[HttpPut("")]
-        //public IActionResult InsertUrl(string url) {
-        //    _connection.Open();
-        //    string query = "";
-        //    _connection.Close();
+        [HttpUpdate("")]
+        public IActionResult InsertUrl(string url) {
+           _connection.Open();
+           string query = "";
+           _connection.Close();
             
-        //}
+        }
 
         [HttpGet]
         public Models.ApiModels GetGen(string url)
